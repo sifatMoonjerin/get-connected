@@ -1,8 +1,27 @@
 .header{
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 .banner-img{
     height: 120px
+}
+
+.header nav{
+    background-color: #85A2B6;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.header nav a{
+    text-decoration: none;
+    color: white;
+    padding: 6px 10px;
+    margin: 0px;
+}
+
+.header nav a:hover{
+    background-color: steelblue;
 }

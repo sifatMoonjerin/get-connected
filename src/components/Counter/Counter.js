@@ -19,8 +19,8 @@ const Counter = (props) => {
                 {connected.map(user => {
                     return (
                         <div>
-                            <p>{user.name}</p> 
-                            <FontAwesomeIcon onClick={()=>props.handleConnectBtn(user, 'disconnect')} icon={faTrash}  />
+                            <p>{user.name} ({user.salary})</p> 
+                            <FontAwesomeIcon className="trash-can" onClick={()=>props.handleConnectBtn(user, 'disconnect')} icon={faTrash}  />
                         </div>
                     )
                 })}
