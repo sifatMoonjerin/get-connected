@@ -1,16 +1,36 @@
 import React from 'react';
 import './User.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserFriends, faPhone, faEnvelope, faLaptop, faDollarSign } from '@fortawesome/free-solid-svg-icons';
 
 const User = (props) => {
     return (
         <div>
-            <img src={props.user.image} alt="notok"></img>
-            <p>Name: {props.user.name}</p>
-            <p>Userid: {props.user.username}</p>
-            <p>email: {props.user.email}</p>
-            <p>phone: {props.user.phone}</p>
-            <p>website: {props.user.website}</p>
-            <p>salary: {props.user.salary}</p>
+            <div className="container">
+            <div className="img-container">
+                <img src={props.user.background} alt="" className="banner-img"></img>
+                <img src={props.user.image} alt="" className="profile-img"></img>
+            </div>
+
+
+            <div className="content">
+                <div className="title">
+                <p>{props.user.name}</p>
+                <span>@{props.user.username}</span>
+                </div>
+
+                <div className="info">
+                    <p><FontAwesomeIcon icon={faDollarSign}  /> {props.user.salary}</p>
+                    <p><FontAwesomeIcon icon={faPhone} /> {props.user.phone}</p>
+                    <p><FontAwesomeIcon icon={faEnvelope} /> {props.user.email}</p>
+                    <p><FontAwesomeIcon icon={faLaptop}  /> {props.user.website}</p>
+                </div>
+
+                <button className="connect">
+                    <FontAwesomeIcon icon={faUserFriends} /> connect
+                </button>
+            </div>
+            </div>
         </div>
     );
 };
