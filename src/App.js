@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import fakeUsers from './fakeUsers/fakeUsers';
-import User from './components/User/User';
+import List from './components/List/List';
 import Header from './components/Header/Header';
 
 
@@ -9,9 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      {fakeUsers.map(u => {
-        return <User user={u}></User>
-      })}
+      <List users={fakeUsers}></List>
     </div>
   );
 }
