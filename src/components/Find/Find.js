@@ -1,6 +1,7 @@
 import React, { useState }  from 'react';
 import List from '../List/List';
 import fakeUsers from '../../fakeUsers/fakeUsers';
+import Counter from '../Counter/Counter';
 
 const Find = () => {
     const newUsers = fakeUsers.map(user => {
@@ -9,13 +10,13 @@ const Find = () => {
     });
 
     const [users, setUsers] = useState(newUsers);
-    const [count, setCount] = useState([]);
+    const [connected, setConnected] = useState([]);
 
     const handleConnectBtn = (person, status) => {
         if(status === "connect"){
-            setCount([...count, person])
+            setConnected([...connected, person])
         } else{
-            setCount(count.filter(user => user.id !== person.id))
+            setConnected(connected.filter(user => user.id !== person.id))
         } 
         const updatedUsers = users.map(user => {
             if(user.id === person.id){
@@ -29,8 +30,8 @@ const Find = () => {
 
     return (
         <div>
-            {console.log(count)}
             <List users={users} handleConnectBtn={handleConnectBtn}></List>
+            <Counter connected={connected} handleConnectBtn={handleConnectBtn}></Counter>
         </div>
     );
 };
