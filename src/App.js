@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import fakeUsers from './fakeUsers/fakeUsers';
-import List from './components/List/List';
+import Find from './components/Find/Find';
 import Header from './components/Header/Header';
 
 
@@ -9,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      <List users={fakeUsers}></List>
+      <Find></Find>
     </div>
   );
 }
