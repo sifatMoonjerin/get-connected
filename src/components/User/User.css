@@ -61,25 +61,43 @@
       padding: 10px 20px 15px;
   }
   
-  .connect{
-    width: 120px;
+  button{
+    width: 140px;
     background-color: #fff;
     text-align: center;
-    border: 2px solid #85A2B6;
     border-radius: 50px;
     padding: 5px 10px 3px;
-    color: #85A2B6;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.5s ease;
   }
+
+  button:focus{
+    outline: none;
+  }
   
+  .connect{
+    color: #85A2B6;
+    border: 2px solid #85A2B6;
+  }
+
   .connect:hover{
     color: #fff;
     background: #85A2B6;
   }
   
-  .connect:focus{
-      outline: none;
+  
+  .disconnect{
+    color: #BE5960;
+    border: 2px solid #BE5960;
   }
+
+  .disconnect:hover{
+    color: #fff;
+    background: #BE5960;
+  }
+  
+  
+  
+
   
